@@ -20,6 +20,8 @@ kotlin {
             dependencies {
                 implementation(compose.runtime)
                 implementation(compose.material3)
+                implementation(compose.components.resources)
+                implementation(compose.foundation)
             }
         }
 
@@ -28,7 +30,6 @@ kotlin {
                 implementation(libs.androidx.activity.ktx)
                 implementation(libs.androidx.foundation.layout.android)
                 implementation(libs.androidx.activity.compose)
-                implementation(libs.androidx.material3.android)
                 implementation(libs.androidx.ui.tooling.preview.android)
             }
         }
@@ -86,7 +87,7 @@ android {
         compose = true
     }
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.1"
+        kotlinCompilerExtensionVersion = "1.5.15"
     }
     packaging {
         resources {
